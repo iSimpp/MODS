@@ -41,6 +41,7 @@ def main():
 
     link = sys.argv[1]
     name = sys.argv[2]
+
     FullPath = os.path.join(DirectoryPaths, ModdedDirs[choice])
     AddMod(FullPath, link=link, name=name)
 main()
