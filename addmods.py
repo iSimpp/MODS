@@ -44,4 +44,5 @@ def main():
 
     FullPath = os.path.join(DirectoryPaths, ModdedDirs[choice])
     AddMod(FullPath, link=link, name=name)
+    os.system(f'python addversion.py cmduse {ModdedDirs[choice]}')
 main()

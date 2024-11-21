@@ -1,5 +1,6 @@
 import os
 import tkinter as tk
+import sys
 import shutil
 
 # CONTROL, DO NOT TOUCH
@@ -65,21 +66,28 @@ def set_all_widgets_black(widget):
         set_all_widgets_black(child)
 
 def Ui():
-    global root
-    root = tk.Tk()
-    root.title("Main Window")
-    root.geometry("1000x500")
-    root.config(bg="black")
-    
-    label = tk.Label(root, text="Versions Available", font=("Arial Rounded MT Bold", 24), bg="black")
-    label.pack(pady=20)
-    
-    for idx, Dirs in enumerate(LoadMods()):
-        button = tk.Button(root, text=ModdedDirs[idx], command=lambda idx=idx: SelectMod(ModdedDirs[idx]))
-        button.pack(pady=5)
 
-    set_all_widgets_black(root)
-    root.mainloop()
+    if sys.argv[1] == "cmduse":
+        idx = sys.argv[2]
+        LoadMods()
+        SelectMod(ModdedDirs[idx])
+    else:
 
-Ui()
+        global root
+        root = tk.Tk()
+        root.title("Main Window")
+        root.geometry("1000x500")
+        root.config(bg="black")
+
+        label = tk.Label(root, text="Versions Available", font=("Arial Rounded MT Bold", 24), bg="black")
+        label.pack(pady=20)
+
+        for idx, Dirs in enumerate(LoadMods()):
+            button = tk.Button(root, text=ModdedDirs[idx], command=lambda idx=idx: SelectMod(ModdedDirs[idx]))
+            button.pack(pady=5)
+
+        set_all_widgets_black(root)
+        root.mainloop()
+
+        Ui()
 
