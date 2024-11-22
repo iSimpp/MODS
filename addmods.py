@@ -2,6 +2,7 @@ import os
 import sys
 from colorama import Fore
 import requests
+from addversion import SelectMod
 DirectoryPaths = os.path.expandvars(r"%APPDATA%\Mods")
 ModdedDirs = list()
 
@@ -44,5 +45,6 @@ def main():
 
     FullPath = os.path.join(DirectoryPaths, ModdedDirs[choice])
     AddMod(FullPath, link=link, name=name)
-    os.system(f'python addversion.py cmduse {ModdedDirs[choice]}')
+    SelectMod(ModdedDirs[choice])
+    
 main()

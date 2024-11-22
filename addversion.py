@@ -66,28 +66,21 @@ def set_all_widgets_black(widget):
         set_all_widgets_black(child)
 
 def Ui():
+    
 
-    if sys.argv[1] == "cmduse":
-        idx = sys.argv[2]
-        LoadMods()
-        SelectMod(ModdedDirs[idx])
-    else:
 
-        global root
-        root = tk.Tk()
-        root.title("Main Window")
-        root.geometry("1000x500")
-        root.config(bg="black")
-
-        label = tk.Label(root, text="Versions Available", font=("Arial Rounded MT Bold", 24), bg="black")
-        label.pack(pady=20)
-
-        for idx, Dirs in enumerate(LoadMods()):
-            button = tk.Button(root, text=ModdedDirs[idx], command=lambda idx=idx: SelectMod(ModdedDirs[idx]))
-            button.pack(pady=5)
-
-        set_all_widgets_black(root)
-        root.mainloop()
-
-        Ui()
+    global root
+    root = tk.Tk()
+    root.title("Main Window")
+    root.geometry("1000x500")
+    root.config(bg="black")
+    label = tk.Label(root, text="Versions Available", font=("Arial Rounded MT Bold", 24), bg="black")
+    label.pack(pady=20)
+    for idx, Dirs in enumerate(LoadMods()):
+        button = tk.Button(root, text=ModdedDirs[idx], command=lambda idx=idx: SelectMod(ModdedDirs[idx]))
+        button.pack(pady=5)
+    set_all_widgets_black(root)
+    root.mainloop()
+if __name__ == "__main__":
+    Ui()
 
