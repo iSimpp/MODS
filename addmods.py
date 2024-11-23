@@ -2,17 +2,12 @@ import os
 import sys
 from colorama import Fore
 import requests
-from addversion import SelectMod
-DirectoryPaths = os.path.expandvars(r"%APPDATA%\Mods")
-ModdedDirs = list()
+from version import SelectMod
+from Library import *
 
-def LoadMods():
-    if not os.listdir(DirectoryPaths):
-        print(f"{Fore.RED}There are no Directories")
-    else:
-        for eachdir in os.listdir(DirectoryPaths):
-            ModdedDirs.append(eachdir)
-        return ModdedDirs
+ModdedDirs = LoadMods()
+
+
 def PrintItCool(thelist: list):
     idx = 1
     theprint = ""
@@ -28,7 +23,7 @@ def AddMod(directory: str, link: str, name: str):
     with open(full_path, 'wb') as f:
         f.write(url.content)
 
-LoadMods()
+
 
 
 def main():
@@ -43,7 +38,7 @@ def main():
     link = sys.argv[1]
     name = sys.argv[2]
 
-    FullPath = os.path.join(DirectoryPaths, ModdedDirs[choice])
+    FullPath = os.path.join(Variables.DirectoryPaths, ModdedDirs[choice])
     AddMod(FullPath, link=link, name=name)
     SelectMod(ModdedDirs[choice])
     
