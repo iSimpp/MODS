@@ -38,8 +38,8 @@ And then select your version, mine is going to be 1.21, ![](assets/download2.png
 
 Open File Explorer (Windows + E) and nagivate to the MODS folder (this one).
 
-Right click it `Open in Terminal` and then run `python addmods.py <link> <name of the mod>`
+Right click it `Open in Terminal` and then run <code><pre>python addmods.py [link] [name of the mod]</pre></code>
 
 In my case I would run:
 
-`python addmods.py *https://cdn.modrinth.com/data/P7dR8mSH/versions/oGwyXeEI/fabric-api-0.102.0%2B1.21.jar* FabricAPI`
+<pre><code>python addmods.py <b>https://cdn.modrinth.com/data/P7dR8mSH/versions/oGwyXeEI/fabric-api-0.102.0%2B1.21.jar</b> FabricAPI`</code></pre>
