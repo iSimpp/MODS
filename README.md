@@ -25,14 +25,14 @@ Go into https://modrinth.com/mods, and then click on your favourite mod. I'll be
 **Step 2**:
 After you've clicked on your mod, click on the ***Download*** button:
 
-![Download button](assets\download.png)
+![Download button](assets/download.png)
 
-And then select your version, mine is going to be 1.21, ![](assets\download2.png).
+And then select your version, mine is going to be 1.21, ![](assets/download2.png).
 
 **Step 3**:
 
 ⚠️**Do not click the Download button.** Right click it and then just
-![Copy link](assets\copylink.png).
+![Copy link](assets/copylink.png).
 
 **Step 4**:
 
