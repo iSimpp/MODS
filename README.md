@@ -20,7 +20,7 @@ We will be covering Modrinth and CurseForge.
 
 Go into https://modrinth.com/mods, and then click on your favourite mod. I'll be demostrating using Fabric API.
 
-![Fabric API](assets\FabricAPI.png)
+![Fabric API](assets/FabricAPI.png)
 
 **Step 2**:
 After you've clicked on your mod, click on the ***Download*** button:
