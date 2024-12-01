@@ -7,7 +7,7 @@ Then download this repo using [this link](https://github.com/iSimpp/MODS/archive
 
 
 # Visual Explaination:
-We will be covering Modrinth and CurseForge.
+We will be covering Modrinth (not CurseForge, because I haven't found any way of making it work because of the redirects).
 
 
 ## Modrinth
